@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         btnSave.setOnClickListener(view -> {
             int[] arr =getIntArray();
             System.out.printf("===> %d %d \n",arr[0],arr[1]);
+            byte[] _tmpBytes = getByteArray();
+            System.out.printf("===> %d %d \n",_tmpBytes[0],_tmpBytes[1]);
         });
 
         //获取USB管理服务
@@ -136,4 +138,6 @@ public class MainActivity extends AppCompatActivity {
      */
     public native String stringFromJNI();
     public native int[] getIntArray();
+
+    public native byte[] getByteArray();
 }
